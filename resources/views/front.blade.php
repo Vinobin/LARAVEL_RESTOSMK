@@ -12,10 +12,10 @@
     <div>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a href="#"><img style="width:300px" src="{{ asset('gambar/logo.png') }}" alt=""></a>
+                <a href="/"><img style="width:300px" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                 <ul class="navbar-nav gap-5">
                     <li class="nav-item">cart</li>
-                    <li class="nav-item">register</li>
+                    <li class="nav-item"><a href="{{ url('register') }}">register</a></li>
                     <li class="nav-item">email</li>
                     <li class="nav-item">login</li>
                     <li class="nav-item">logout</li>
@@ -27,7 +27,8 @@
     <div class="col-2">
         <ul class="list-group">
             @foreach ($kategoris as $kategori)
-            <li class="list-group-item">{{ $kategori->kategori }}</li>
+            <li class="list-group-item"><a href="{{ url('show/'.$kategori->idkategori) }}">{{ $kategori->kategori }}"</a></li>
+          
             @endforeach
     </ul>
     </div>
