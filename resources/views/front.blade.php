@@ -14,7 +14,17 @@
             <div class="container-fluid">
                 <a href="/"><img style="width:300px" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                 <ul class="navbar-nav gap-5">
+                    @if (session()->has('cart'))
+                    <li class="nav-item"> <a href="{{ url('cart') }}">cart(
+                        @php
+                            $count=count(sesion('cart'));
+                            echo $count;
+                        @endphp
+                        )</a></li>
+                    @else
                     <li class="nav-item">cart</li>
+                    @endif
+                  
                     @if (session()->missing('idpelanggan'))
                     <li class="nav-item"><a href="{{ url('register') }}">register</a></li>
                     <li class="nav-item"><a href="{{ url('login') }}"> login </a></li>
@@ -50,8 +60,8 @@
      
     </div>
    </div>
-   <div>
-    footer
+   <div class="bg-light mt5">
+   <p class="text-center">@smk.com</p>
    </div>
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>

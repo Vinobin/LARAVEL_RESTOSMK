@@ -8,7 +8,7 @@
       <h5 class="card-title">{{ $menu->menu }}</h5>
       <p class="card-text">{{ $menu->deskripsi }}</p>
       <h5 class="card-title">{{ $menu->harga }}</h5>
-      <a href="#" class="btn btn-primary">beli</a>
+      <a href="{{ url('beli/'.$menu->idmenu) }}" class="btn btn-primary">beli</a>
     </div>
   </div>
   @endforeach

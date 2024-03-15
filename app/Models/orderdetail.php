@@ -7,14 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class pelanggan extends Authenticatable
+class orderdetail extends Authenticatable
 {
-    use HasFactory, Notifiable;
+use HasFactory, Notifiable;
     protected $fillable=[
-        'pelanggan',
-        'email',
-        'password',
-        'alamat',
-        'telepn\on'
+        'idorder',
+        'idmenu',
+        'jumlah',
+        'hargajual',
     ];
 }
