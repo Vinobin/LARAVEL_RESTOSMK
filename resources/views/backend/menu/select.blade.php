@@ -46,8 +46,8 @@
                 <td>{{ $menu->deskripsi }}</td>
                 <td><img src="{{ asset('gambar/'.$menu->gambar) }}" alt=""></td>
                 <td>{{ $menu->harga }}</td>
-                <td><a href="{{ url('admin/kategori/'.$menu->idmenu.'/edit') }}">ubah</a></td>
-                <td><a href="{{ url('admin/kategori/'.$menu->idmenu) }}">hapus</a></td>
+                <td><a href="{{ url('admin/menu/'.$menu->idmenu.'/edit') }}">ubah</a></td>
+                <td><a href="{{ url('admin/menu/'.$menu->idmenu) }}">hapus</a></td>
               </tr>
           @endforeach
         </tbody>
