@@ -17,5 +17,6 @@ use HasFactory, Notifiable;
         'total',
         'bayar',
         'kembali',
+        'status',
     ];
 }

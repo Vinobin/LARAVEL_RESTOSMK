@@ -32,6 +32,8 @@ route::group(['middleware'=>['ceklogin:kasir']],function(){
 route::group(['middleware'=>['ceklogin:manager']],function(){
     route::resource('kategori',kategoricontroller::class);
     route::resource('menu',menucontroller::class);
+    route::resource('order',ordercontroller::class);
+    route::resource('orderdetail',orderdetailcontroller::class);
     route::get('select',[menucontroller::class,'select']);
     route::post('postmenu/{id}',[menucontroller::class,'update']);
 });
