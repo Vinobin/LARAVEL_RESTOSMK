@@ -27,7 +27,8 @@ public function store(Reqest $request){
     'alamat' => $data['alamat'],
     'telepon' => $data['telepon'],
     'email' => $data['email'],
-    'password' => hash::make($data['password'])
+    'password' => hash::make($data['password']),
+    'aktif' => 1
 ]);
 return redirect('/');
 }
@@ -56,7 +57,7 @@ public function destroy($id){
             'email'=>'required',
             'password'=>'required |min:3',
         ]);
-        $pelanggan=pelanggan::where('email',$data)->first();
+        $pelanggan=pelanggan::where('email',$data)->where('aktif',1)->first();
         if($pelanggan){
            if(hash::check($data['password'],$pelanggan['password'])){
               $data=[

@@ -34,6 +34,7 @@ route::group(['middleware'=>['ceklogin:manager']],function(){
     route::resource('menu',menucontroller::class);
     route::resource('order',ordercontroller::class);
     route::resource('orderdetail',orderdetailcontroller::class);
+    route::resource('pelanggan',pelanggancontroller::class);
     route::get('select',[menucontroller::class,'select']);
     route::post('postmenu/{id}',[menucontroller::class,'update']);
 });
